@@ -1,0 +1,3 @@
+[submodule "ext/stmd_ruby/stmd"]
+	path = ext/stmd_ruby/stmd
+	url = https://github.com/jgm/stmd.git
