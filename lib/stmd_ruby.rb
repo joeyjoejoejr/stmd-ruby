@@ -1,5 +1,7 @@
 require "stmd_ruby/version"
 
 module StmdRuby
-  # Your code goes here...
+  def self.md_to_html(md)
+    "h1"
+  end
 end
