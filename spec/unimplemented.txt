@@ -1,0 +1,136 @@
+TESTSTART
+    a→a
+    ὐ→a
+MIDDLE
+<pre><code>a   a
+ὐ   a
+</code></pre>
+TESTEND
+
+TESTSTART
+[ΑΓΩ]: /φου
+
+[αγω]
+MIDDLE
+<p><a href="/%CF%86%CE%BF%CF%85">αγω</a></p>
+TESTEND
+TESTSTART
+*foo**
+
+**foo*
+MIDDLE
+<p><em>foo</em>*</p>
+<p>*<em>foo</em></p>
+TESTEND
+
+TESTSTART
+*foo *bar**
+
+**foo* bar*
+MIDDLE
+<p><em>foo <em>bar</em></em></p>
+<p><em><em>foo</em> bar</em></p>
+TESTEND
+TESTSTART
+***foo*
+MIDDLE
+<p>**<em>foo</em></p>
+TESTEND
+TESTSTART
+***foo**
+MIDDLE
+<p>*<strong>foo</strong></p>
+TESTEND
+
+TESTSTART
+[Толпой][Толпой] is a Russian word.
+
+[ТОЛПОЙ]: /url
+MIDDLE
+<p><a href="/url">Толпой</a> is a Russian word.</p>
+TESTEND
+
+TESTSTART
+Foo χρῆν
+MIDDLE
+<p>Foo χρῆν</p>
+TESTEND
+
+TESTSTART
+\→\A\a\ \3\φ\«
+MIDDLE
+<p>\   \A\a\ \3\φ\«</p>
+TESTEND
+
+TESTSTART
+&nbsp; &amp; &copy; &AElig; &Dcaron; &frac34; &HilbertSpace; &DifferentialD; &ClockwiseContourIntegral;
+MIDDLE
+<p>  &amp; © Æ Ď ¾ ℋ ⅆ ∲</p>
+TESTEND
+
+TESTSTART
+&#35; &#1234; &#992; &#98765432;
+MIDDLE
+<p># Ӓ Ϡ �</p>
+TESTEND
+
+TESTSTART
+&#X22; &#XD06; &#xcab;
+MIDDLE
+<p>&quot; ആ ಫ</p>
+TESTEND
+TESTSTART
+[foo](/f&ouml;&ouml; "f&ouml;&ouml;")
+MIDDLE
+<p><a href="/f%C3%B6%C3%B6" title="föö">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+
+[foo]: /f&ouml;&ouml; "f&ouml;&ouml;"
+MIDDLE
+<p><a href="/f%C3%B6%C3%B6" title="föö">foo</a></p>
+TESTEND
+
+TESTSTART
+``` f&ouml;&ouml;
+foo
+```
+MIDDLE
+<pre><code class="language-föö">foo
+</code></pre>
+TESTEND
+
+TESTSTART
+*_*
+MIDDLE
+<p><em>_</em></p>
+TESTEND
+TESTSTART
+_*_
+MIDDLE
+<p><em>*</em></p>
+TESTEND
+TESTSTART
+*__*
+MIDDLE
+<p><em>__</em></p>
+TESTEND
+
+TESTSTART
+_**_
+MIDDLE
+<p><em>**</em></p>
+TESTEND
+TESTSTART
+**foo*bar*baz**
+MIDDLE
+<p><em><em>foo</em>bar</em>baz**</p>
+TESTEND
+
+TESTSTART
+*foo**bar**baz*
+MIDDLE
+<p><em>foo</em><em>bar</em><em>baz</em></p>
+TESTEND

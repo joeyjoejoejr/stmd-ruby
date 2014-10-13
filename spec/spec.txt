@@ -1,0 +1,3893 @@
+TESTSTART
+→foo→baz→→bim
+MIDDLE
+<pre><code>foo baz     bim
+</code></pre>
+TESTEND
+
+TESTSTART
+- `one
+- two`
+MIDDLE
+<ul>
+<li>`one</li>
+<li>two`</li>
+</ul>
+TESTEND
+
+TESTSTART
+***
+---
+___
+MIDDLE
+<hr />
+<hr />
+<hr />
+TESTEND
+
+TESTSTART
++++
+MIDDLE
+<p>+++</p>
+TESTEND
+
+TESTSTART
+===
+MIDDLE
+<p>===</p>
+TESTEND
+
+TESTSTART
+--
+**
+__
+MIDDLE
+<p>--
+**
+__</p>
+TESTEND
+
+TESTSTART
+ ***
+  ***
+   ***
+MIDDLE
+<hr />
+<hr />
+<hr />
+TESTEND
+
+TESTSTART
+    ***
+MIDDLE
+<pre><code>***
+</code></pre>
+TESTEND
+
+TESTSTART
+Foo
+    ***
+MIDDLE
+<p>Foo
+***</p>
+TESTEND
+
+TESTSTART
+_____________________________________
+MIDDLE
+<hr />
+TESTEND
+
+TESTSTART
+ - - -
+MIDDLE
+<hr />
+TESTEND
+
+TESTSTART
+ **  * ** * ** * **
+MIDDLE
+<hr />
+TESTEND
+
+TESTSTART
+-     -      -      -
+MIDDLE
+<hr />
+TESTEND
+
+TESTSTART
+- - - -    
+MIDDLE
+<hr />
+TESTEND
+
+TESTSTART
+_ _ _ _ a
+
+a------
+MIDDLE
+<p>_ _ _ _ a</p>
+<p>a------</p>
+TESTEND
+
+TESTSTART
+ *-*
+MIDDLE
+<p><em>-</em></p>
+TESTEND
+
+TESTSTART
+- foo
+***
+- bar
+MIDDLE
+<ul>
+<li>foo</li>
+</ul>
+<hr />
+<ul>
+<li>bar</li>
+</ul>
+TESTEND
+
+TESTSTART
+Foo
+***
+bar
+MIDDLE
+<p>Foo</p>
+<hr />
+<p>bar</p>
+TESTEND
+
+TESTSTART
+Foo
+---
+bar
+MIDDLE
+<h2>Foo</h2>
+<p>bar</p>
+TESTEND
+
+TESTSTART
+* Foo
+* * *
+* Bar
+MIDDLE
+<ul>
+<li>Foo</li>
+</ul>
+<hr />
+<ul>
+<li>Bar</li>
+</ul>
+TESTEND
+
+TESTSTART
+- Foo
+- * * *
+MIDDLE
+<ul>
+<li>Foo</li>
+<li><hr /></li>
+</ul>
+TESTEND
+
+TESTSTART
+# foo
+## foo
+### foo
+#### foo
+##### foo
+###### foo
+MIDDLE
+<h1>foo</h1>
+<h2>foo</h2>
+<h3>foo</h3>
+<h4>foo</h4>
+<h5>foo</h5>
+<h6>foo</h6>
+TESTEND
+
+TESTSTART
+####### foo
+MIDDLE
+<p>####### foo</p>
+TESTEND
+
+TESTSTART
+#5 bolt
+MIDDLE
+<p>#5 bolt</p>
+TESTEND
+
+TESTSTART
+\## foo
+MIDDLE
+<p>## foo</p>
+TESTEND
+
+TESTSTART
+# foo *bar* \*baz\*
+MIDDLE
+<h1>foo <em>bar</em> *baz*</h1>
+TESTEND
+
+TESTSTART
+#                  foo                     
+MIDDLE
+<h1>foo</h1>
+TESTEND
+
+TESTSTART
+ ### foo
+  ## foo
+   # foo
+MIDDLE
+<h3>foo</h3>
+<h2>foo</h2>
+<h1>foo</h1>
+TESTEND
+
+TESTSTART
+    # foo
+MIDDLE
+<pre><code># foo
+</code></pre>
+TESTEND
+
+TESTSTART
+foo
+    # bar
+MIDDLE
+<p>foo
+# bar</p>
+TESTEND
+
+TESTSTART
+## foo ##
+  ###   bar    ###
+MIDDLE
+<h2>foo</h2>
+<h3>bar</h3>
+TESTEND
+
+TESTSTART
+# foo ##################################
+##### foo ##
+MIDDLE
+<h1>foo</h1>
+<h5>foo</h5>
+TESTEND
+
+TESTSTART
+### foo ###     
+MIDDLE
+<h3>foo</h3>
+TESTEND
+
+TESTSTART
+### foo ### b
+MIDDLE
+<h3>foo ### b</h3>
+TESTEND
+
+TESTSTART
+### foo \###
+## foo \#\##
+# foo \#
+MIDDLE
+<h3>foo #</h3>
+<h2>foo ##</h2>
+<h1>foo #</h1>
+TESTEND
+
+TESTSTART
+****
+## foo
+****
+MIDDLE
+<hr />
+<h2>foo</h2>
+<hr />
+TESTEND
+
+TESTSTART
+Foo bar
+# baz
+Bar foo
+MIDDLE
+<p>Foo bar</p>
+<h1>baz</h1>
+<p>Bar foo</p>
+TESTEND
+
+TESTSTART
+## 
+#
+### ###
+MIDDLE
+<h2></h2>
+<h1></h1>
+<h3></h3>
+TESTEND
+
+TESTSTART
+Foo *bar*
+=========
+
+Foo *bar*
+---------
+MIDDLE
+<h1>Foo <em>bar</em></h1>
+<h2>Foo <em>bar</em></h2>
+TESTEND
+
+TESTSTART
+Foo
+-------------------------
+
+Foo
+=
+MIDDLE
+<h2>Foo</h2>
+<h1>Foo</h1>
+TESTEND
+
+TESTSTART
+   Foo
+---
+
+  Foo
+-----
+
+  Foo
+  ===
+MIDDLE
+<h2>Foo</h2>
+<h2>Foo</h2>
+<h1>Foo</h1>
+TESTEND
+
+TESTSTART
+    Foo
+    ---
+
+    Foo
+---
+MIDDLE
+<pre><code>Foo
+---
+
+Foo
+</code></pre>
+<hr />
+TESTEND
+
+TESTSTART
+Foo
+   ----      
+MIDDLE
+<h2>Foo</h2>
+TESTEND
+
+TESTSTART
+Foo
+     ---
+MIDDLE
+<p>Foo
+---</p>
+TESTEND
+
+TESTSTART
+Foo
+= =
+
+Foo
+--- -
+MIDDLE
+<p>Foo
+= =</p>
+<p>Foo</p>
+<hr />
+TESTEND
+
+TESTSTART
+Foo  
+-----
+MIDDLE
+<h2>Foo</h2>
+TESTEND
+
+TESTSTART
+Foo\
+----
+MIDDLE
+<h2>Foo\</h2>
+TESTEND
+
+TESTSTART
+`Foo
+----
+`
+
+<a title="a lot
+---
+of dashes"/>
+MIDDLE
+<h2>`Foo</h2>
+<p>`</p>
+<h2>&lt;a title=&quot;a lot</h2>
+<p>of dashes&quot;/&gt;</p>
+TESTEND
+
+TESTSTART
+> Foo
+---
+MIDDLE
+<blockquote>
+<p>Foo</p>
+</blockquote>
+<hr />
+TESTEND
+
+TESTSTART
+Foo
+Bar
+---
+
+Foo
+Bar
+===
+MIDDLE
+<p>Foo
+Bar</p>
+<hr />
+<p>Foo
+Bar
+===</p>
+TESTEND
+
+TESTSTART
+---
+Foo
+---
+Bar
+---
+Baz
+MIDDLE
+<hr />
+<h2>Foo</h2>
+<h2>Bar</h2>
+<p>Baz</p>
+TESTEND
+
+TESTSTART
+
+====
+MIDDLE
+<p>====</p>
+TESTEND
+
+TESTSTART
+    a simple
+      indented code block
+MIDDLE
+<pre><code>a simple
+  indented code block
+</code></pre>
+TESTEND
+
+TESTSTART
+    <a/>
+    *hi*
+
+    - one
+MIDDLE
+<pre><code>&lt;a/&gt;
+*hi*
+
+- one
+</code></pre>
+TESTEND
+
+TESTSTART
+    chunk1
+
+    chunk2
+  
+ 
+ 
+    chunk3
+MIDDLE
+<pre><code>chunk1
+
+chunk2
+
+
+
+chunk3
+</code></pre>
+TESTEND
+
+TESTSTART
+    chunk1
+      
+      chunk2
+MIDDLE
+<pre><code>chunk1
+  
+  chunk2
+</code></pre>
+TESTEND
+
+TESTSTART
+Foo
+    bar
+
+MIDDLE
+<p>Foo
+bar</p>
+TESTEND
+
+TESTSTART
+    foo
+bar
+MIDDLE
+<pre><code>foo
+</code></pre>
+<p>bar</p>
+TESTEND
+
+TESTSTART
+# Header
+    foo
+Header
+------
+    foo
+----
+MIDDLE
+<h1>Header</h1>
+<pre><code>foo
+</code></pre>
+<h2>Header</h2>
+<pre><code>foo
+</code></pre>
+<hr />
+TESTEND
+
+TESTSTART
+        foo
+    bar
+MIDDLE
+<pre><code>    foo
+bar
+</code></pre>
+TESTEND
+
+TESTSTART
+
+    
+    foo
+    
+
+MIDDLE
+<pre><code>foo
+</code></pre>
+TESTEND
+
+TESTSTART
+    foo  
+MIDDLE
+<pre><code>foo  
+</code></pre>
+TESTEND
+
+TESTSTART
+```
+<
+ >
+```
+MIDDLE
+<pre><code>&lt;
+ &gt;
+</code></pre>
+TESTEND
+
+TESTSTART
+~~~
+<
+ >
+~~~
+MIDDLE
+<pre><code>&lt;
+ &gt;
+</code></pre>
+TESTEND
+
+TESTSTART
+```
+aaa
+~~~
+```
+MIDDLE
+<pre><code>aaa
+~~~
+</code></pre>
+TESTEND
+
+TESTSTART
+~~~
+aaa
+```
+~~~
+MIDDLE
+<pre><code>aaa
+```
+</code></pre>
+TESTEND
+
+TESTSTART
+````
+aaa
+```
+``````
+MIDDLE
+<pre><code>aaa
+```
+</code></pre>
+TESTEND
+
+TESTSTART
+~~~~
+aaa
+~~~
+~~~~
+MIDDLE
+<pre><code>aaa
+~~~
+</code></pre>
+TESTEND
+
+TESTSTART
+```
+MIDDLE
+<pre><code></code></pre>
+TESTEND
+
+TESTSTART
+`````
+
+```
+aaa
+MIDDLE
+<pre><code>
+```
+aaa
+</code></pre>
+TESTEND
+
+TESTSTART
+```
+
+  
+```
+MIDDLE
+<pre><code>
+  
+</code></pre>
+TESTEND
+
+TESTSTART
+```
+```
+MIDDLE
+<pre><code></code></pre>
+TESTEND
+
+TESTSTART
+ ```
+ aaa
+aaa
+```
+MIDDLE
+<pre><code>aaa
+aaa
+</code></pre>
+TESTEND
+
+TESTSTART
+  ```
+aaa
+  aaa
+aaa
+  ```
+MIDDLE
+<pre><code>aaa
+aaa
+aaa
+</code></pre>
+TESTEND
+
+TESTSTART
+   ```
+   aaa
+    aaa
+  aaa
+   ```
+MIDDLE
+<pre><code>aaa
+ aaa
+aaa
+</code></pre>
+TESTEND
+
+TESTSTART
+    ```
+    aaa
+    ```
+MIDDLE
+<pre><code>```
+aaa
+```
+</code></pre>
+TESTEND
+
+TESTSTART
+``` ```
+aaa
+MIDDLE
+<p><code></code>
+aaa</p>
+TESTEND
+
+TESTSTART
+~~~~~~
+aaa
+~~~ ~~
+MIDDLE
+<pre><code>aaa
+~~~ ~~
+</code></pre>
+TESTEND
+
+TESTSTART
+foo
+```
+bar
+```
+baz
+MIDDLE
+<p>foo</p>
+<pre><code>bar
+</code></pre>
+<p>baz</p>
+TESTEND
+
+TESTSTART
+foo
+---
+~~~
+bar
+~~~
+# baz
+MIDDLE
+<h2>foo</h2>
+<pre><code>bar
+</code></pre>
+<h1>baz</h1>
+TESTEND
+
+TESTSTART
+```ruby
+def foo(x)
+  return 3
+end
+```
+MIDDLE
+<pre><code class="language-ruby">def foo(x)
+  return 3
+end
+</code></pre>
+TESTEND
+
+TESTSTART
+~~~~    ruby startline=3 $%@#$
+def foo(x)
+  return 3
+end
+~~~~~~~
+MIDDLE
+<pre><code class="language-ruby">def foo(x)
+  return 3
+end
+</code></pre>
+TESTEND
+
+TESTSTART
+````;
+````
+MIDDLE
+<pre><code class="language-;"></code></pre>
+TESTEND
+
+TESTSTART
+``` aa ```
+foo
+MIDDLE
+<p><code>aa</code>
+foo</p>
+TESTEND
+
+TESTSTART
+```
+``` aaa
+```
+MIDDLE
+<pre><code>``` aaa
+</code></pre>
+TESTEND
+
+TESTSTART
+<table>
+  <tr>
+    <td>
+           hi
+    </td>
+  </tr>
+</table>
+
+okay.
+MIDDLE
+<table>
+  <tr>
+    <td>
+           hi
+    </td>
+  </tr>
+</table>
+<p>okay.</p>
+TESTEND
+
+TESTSTART
+ <div>
+  *hello*
+         <foo><a>
+MIDDLE
+ <div>
+  *hello*
+         <foo><a>
+TESTEND
+
+TESTSTART
+<DIV CLASS="foo">
+
+*Markdown*
+
+</DIV>
+MIDDLE
+<DIV CLASS="foo">
+<p><em>Markdown</em></p>
+</DIV>
+TESTEND
+
+TESTSTART
+<div></div>
+``` c
+int x = 33;
+```
+MIDDLE
+<div></div>
+``` c
+int x = 33;
+```
+TESTEND
+
+TESTSTART
+<!-- Foo
+bar
+   baz -->
+MIDDLE
+<!-- Foo
+bar
+   baz -->
+TESTEND
+
+TESTSTART
+<?php
+  echo 'foo'
+?>
+MIDDLE
+<?php
+  echo 'foo'
+?>
+TESTEND
+
+TESTSTART
+<![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+  {
+  return 1;
+  }
+else
+  {
+  return 0;
+  }
+}
+]]>
+MIDDLE
+<![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+  {
+  return 1;
+  }
+else
+  {
+  return 0;
+  }
+}
+]]>
+TESTEND
+
+TESTSTART
+  <!-- foo -->
+
+    <!-- foo -->
+MIDDLE
+  <!-- foo -->
+<pre><code>&lt;!-- foo --&gt;
+</code></pre>
+TESTEND
+
+TESTSTART
+Foo
+<div>
+bar
+</div>
+MIDDLE
+<p>Foo</p>
+<div>
+bar
+</div>
+TESTEND
+
+TESTSTART
+<div>
+bar
+</div>
+*foo*
+MIDDLE
+<div>
+bar
+</div>
+*foo*
+TESTEND
+
+TESTSTART
+<div class
+foo
+MIDDLE
+<div class
+foo
+TESTEND
+
+TESTSTART
+<div>
+
+*Emphasized* text.
+
+</div>
+MIDDLE
+<div>
+<p><em>Emphasized</em> text.</p>
+</div>
+TESTEND
+
+TESTSTART
+<div>
+*Emphasized* text.
+</div>
+MIDDLE
+<div>
+*Emphasized* text.
+</div>
+TESTEND
+
+TESTSTART
+<table>
+
+<tr>
+
+<td>
+Hi
+</td>
+
+</tr>
+
+</table>
+MIDDLE
+<table>
+<tr>
+<td>
+Hi
+</td>
+</tr>
+</table>
+TESTEND
+
+TESTSTART
+[foo]: /url "title"
+
+[foo]
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+   [foo]: 
+      /url  
+           'the title'  
+
+[foo]
+MIDDLE
+<p><a href="/url" title="the title">foo</a></p>
+TESTEND
+
+TESTSTART
+[Foo*bar\]]:my_(url) 'title (with parens)'
+
+[Foo*bar\]]
+MIDDLE
+<p><a href="my_(url)" title="title (with parens)">Foo*bar]</a></p>
+TESTEND
+
+TESTSTART
+[Foo bar]:
+<my url>
+'title'
+
+[Foo bar]
+MIDDLE
+<p><a href="my%20url" title="title">Foo bar</a></p>
+TESTEND
+
+TESTSTART
+[foo]:
+/url
+
+[foo]
+MIDDLE
+<p><a href="/url">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]:
+
+[foo]
+MIDDLE
+<p>[foo]:</p>
+<p>[foo]</p>
+TESTEND
+
+TESTSTART
+[foo]
+
+[foo]: url
+MIDDLE
+<p><a href="url">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+
+[foo]: first
+[foo]: second
+MIDDLE
+<p><a href="first">foo</a></p>
+TESTEND
+
+TESTSTART
+[FOO]: /url
+
+[Foo]
+MIDDLE
+<p><a href="/url">Foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]: /url
+MIDDLE
+TESTEND
+
+TESTSTART
+[foo]: /url "title" ok
+MIDDLE
+<p>[foo]: /url &quot;title&quot; ok</p>
+TESTEND
+
+TESTSTART
+    [foo]: /url "title"
+
+[foo]
+MIDDLE
+<pre><code>[foo]: /url &quot;title&quot;
+</code></pre>
+<p>[foo]</p>
+TESTEND
+
+TESTSTART
+```
+[foo]: /url
+```
+
+[foo]
+MIDDLE
+<pre><code>[foo]: /url
+</code></pre>
+<p>[foo]</p>
+TESTEND
+
+TESTSTART
+Foo
+[bar]: /baz
+
+[bar]
+MIDDLE
+<p>Foo
+[bar]: /baz</p>
+<p>[bar]</p>
+TESTEND
+
+TESTSTART
+# [Foo]
+[foo]: /url
+> bar
+MIDDLE
+<h1><a href="/url">Foo</a></h1>
+<blockquote>
+<p>bar</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+[foo]: /foo-url "foo"
+[bar]: /bar-url
+  "bar"
+[baz]: /baz-url
+
+[foo],
+[bar],
+[baz]
+MIDDLE
+<p><a href="/foo-url" title="foo">foo</a>,
+<a href="/bar-url" title="bar">bar</a>,
+<a href="/baz-url">baz</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+
+> [foo]: /url
+MIDDLE
+<p><a href="/url">foo</a></p>
+<blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+aaa
+
+bbb
+MIDDLE
+<p>aaa</p>
+<p>bbb</p>
+TESTEND
+
+TESTSTART
+aaa
+bbb
+
+ccc
+ddd
+MIDDLE
+<p>aaa
+bbb</p>
+<p>ccc
+ddd</p>
+TESTEND
+
+TESTSTART
+aaa
+
+
+bbb
+MIDDLE
+<p>aaa</p>
+<p>bbb</p>
+TESTEND
+
+TESTSTART
+  aaa
+ bbb
+MIDDLE
+<p>aaa
+bbb</p>
+TESTEND
+
+TESTSTART
+aaa
+             bbb
+                                       ccc
+MIDDLE
+<p>aaa
+bbb
+ccc</p>
+TESTEND
+
+TESTSTART
+   aaa
+bbb
+MIDDLE
+<p>aaa
+bbb</p>
+TESTEND
+
+TESTSTART
+    aaa
+bbb
+MIDDLE
+<pre><code>aaa
+</code></pre>
+<p>bbb</p>
+TESTEND
+
+TESTSTART
+aaa     
+bbb     
+MIDDLE
+<p>aaa<br />
+bbb</p>
+TESTEND
+
+TESTSTART
+  
+
+aaa
+  
+
+# aaa
+
+  
+MIDDLE
+<p>aaa</p>
+<h1>aaa</h1>
+TESTEND
+
+TESTSTART
+> # Foo
+> bar
+> baz
+MIDDLE
+<blockquote>
+<h1>Foo</h1>
+<p>bar
+baz</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+># Foo
+>bar
+> baz
+MIDDLE
+<blockquote>
+<h1>Foo</h1>
+<p>bar
+baz</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+   > # Foo
+   > bar
+ > baz
+MIDDLE
+<blockquote>
+<h1>Foo</h1>
+<p>bar
+baz</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+    > # Foo
+    > bar
+    > baz
+MIDDLE
+<pre><code>&gt; # Foo
+&gt; bar
+&gt; baz
+</code></pre>
+TESTEND
+
+TESTSTART
+> # Foo
+> bar
+baz
+MIDDLE
+<blockquote>
+<h1>Foo</h1>
+<p>bar
+baz</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> bar
+baz
+> foo
+MIDDLE
+<blockquote>
+<p>bar
+baz
+foo</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> foo
+---
+MIDDLE
+<blockquote>
+<p>foo</p>
+</blockquote>
+<hr />
+TESTEND
+
+TESTSTART
+> - foo
+- bar
+MIDDLE
+<blockquote>
+<ul>
+<li>foo</li>
+</ul>
+</blockquote>
+<ul>
+<li>bar</li>
+</ul>
+TESTEND
+
+TESTSTART
+>     foo
+    bar
+MIDDLE
+<blockquote>
+<pre><code>foo
+</code></pre>
+</blockquote>
+<pre><code>bar
+</code></pre>
+TESTEND
+
+TESTSTART
+> ```
+foo
+```
+MIDDLE
+<blockquote>
+<pre><code></code></pre>
+</blockquote>
+<p>foo</p>
+<pre><code></code></pre>
+TESTEND
+
+TESTSTART
+>
+MIDDLE
+<blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+>
+>  
+> 
+MIDDLE
+<blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+>
+> foo
+>  
+MIDDLE
+<blockquote>
+<p>foo</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> foo
+
+> bar
+MIDDLE
+<blockquote>
+<p>foo</p>
+</blockquote>
+<blockquote>
+<p>bar</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> foo
+> bar
+MIDDLE
+<blockquote>
+<p>foo
+bar</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> foo
+>
+> bar
+MIDDLE
+<blockquote>
+<p>foo</p>
+<p>bar</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+foo
+> bar
+MIDDLE
+<p>foo</p>
+<blockquote>
+<p>bar</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> aaa
+***
+> bbb
+MIDDLE
+<blockquote>
+<p>aaa</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>bbb</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> bar
+baz
+MIDDLE
+<blockquote>
+<p>bar
+baz</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+> bar
+
+baz
+MIDDLE
+<blockquote>
+<p>bar</p>
+</blockquote>
+<p>baz</p>
+TESTEND
+
+TESTSTART
+> bar
+>
+baz
+MIDDLE
+<blockquote>
+<p>bar</p>
+</blockquote>
+<p>baz</p>
+TESTEND
+
+TESTSTART
+> > > foo
+bar
+MIDDLE
+<blockquote>
+<blockquote>
+<blockquote>
+<p>foo
+bar</p>
+</blockquote>
+</blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+>>> foo
+> bar
+>>baz
+MIDDLE
+<blockquote>
+<blockquote>
+<blockquote>
+<p>foo
+bar
+baz</p>
+</blockquote>
+</blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+>     code
+
+>    not code
+MIDDLE
+<blockquote>
+<pre><code>code
+</code></pre>
+</blockquote>
+<blockquote>
+<p>not code</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+A paragraph
+with two lines.
+
+    indented code
+
+> A block quote.
+MIDDLE
+<p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote>
+TESTEND
+
+TESTSTART
+1.  A paragraph
+    with two lines.
+
+        indented code
+
+    > A block quote.
+MIDDLE
+<ol>
+<li><p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+- one
+
+ two
+MIDDLE
+<ul>
+<li>one</li>
+</ul>
+<p>two</p>
+TESTEND
+
+TESTSTART
+- one
+
+  two
+MIDDLE
+<ul>
+<li><p>one</p>
+<p>two</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+ -    one
+
+     two
+MIDDLE
+<ul>
+<li>one</li>
+</ul>
+<pre><code> two
+</code></pre>
+TESTEND
+
+TESTSTART
+ -    one
+
+      two
+MIDDLE
+<ul>
+<li><p>one</p>
+<p>two</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+   > > 1.  one
+>>
+>>     two
+MIDDLE
+<blockquote>
+<blockquote>
+<ol>
+<li><p>one</p>
+<p>two</p></li>
+</ol>
+</blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+>>- one
+>>
+  >  > two
+MIDDLE
+<blockquote>
+<blockquote>
+<ul>
+<li>one</li>
+</ul>
+<p>two</p>
+</blockquote>
+</blockquote>
+TESTEND
+
+TESTSTART
+- foo
+
+  bar
+
+- foo
+
+
+  bar
+
+- ```
+  foo
+
+
+  bar
+  ```
+MIDDLE
+<ul>
+<li><p>foo</p>
+<p>bar</p></li>
+<li><p>foo</p></li>
+</ul>
+<p>bar</p>
+<ul>
+<li><pre><code>foo
+
+
+bar
+</code></pre></li>
+</ul>
+TESTEND
+
+TESTSTART
+1.  foo
+
+    ```
+    bar
+    ```
+
+    baz
+
+    > bam
+MIDDLE
+<ol>
+<li><p>foo</p>
+<pre><code>bar
+</code></pre>
+<p>baz</p>
+<blockquote>
+<p>bam</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+- foo
+
+      bar
+MIDDLE
+<ul>
+<li><p>foo</p>
+<pre><code>bar
+</code></pre></li>
+</ul>
+TESTEND
+
+TESTSTART
+  10.  foo
+
+           bar
+MIDDLE
+<ol start="10">
+<li><p>foo</p>
+<pre><code>bar
+</code></pre></li>
+</ol>
+TESTEND
+
+TESTSTART
+    indented code
+
+paragraph
+
+    more code
+MIDDLE
+<pre><code>indented code
+</code></pre>
+<p>paragraph</p>
+<pre><code>more code
+</code></pre>
+TESTEND
+
+TESTSTART
+1.     indented code
+
+   paragraph
+
+       more code
+MIDDLE
+<ol>
+<li><pre><code>indented code
+</code></pre>
+<p>paragraph</p>
+<pre><code>more code
+</code></pre></li>
+</ol>
+TESTEND
+
+TESTSTART
+1.      indented code
+
+   paragraph
+
+       more code
+MIDDLE
+<ol>
+<li><pre><code> indented code
+</code></pre>
+<p>paragraph</p>
+<pre><code>more code
+</code></pre></li>
+</ol>
+TESTEND
+
+TESTSTART
+   foo
+
+bar
+MIDDLE
+<p>foo</p>
+<p>bar</p>
+TESTEND
+
+TESTSTART
+-    foo
+
+  bar
+MIDDLE
+<ul>
+<li>foo</li>
+</ul>
+<p>bar</p>
+TESTEND
+
+TESTSTART
+-  foo
+
+   bar
+MIDDLE
+<ul>
+<li><p>foo</p>
+<p>bar</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+ 1.  A paragraph
+     with two lines.
+
+         indented code
+
+     > A block quote.
+MIDDLE
+<ol>
+<li><p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+  1.  A paragraph
+      with two lines.
+
+          indented code
+
+      > A block quote.
+MIDDLE
+<ol>
+<li><p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+   1.  A paragraph
+       with two lines.
+
+           indented code
+
+       > A block quote.
+MIDDLE
+<ol>
+<li><p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+    1.  A paragraph
+        with two lines.
+
+            indented code
+
+        > A block quote.
+MIDDLE
+<pre><code>1.  A paragraph
+    with two lines.
+
+        indented code
+
+    &gt; A block quote.
+</code></pre>
+TESTEND
+
+TESTSTART
+  1.  A paragraph
+with two lines.
+
+          indented code
+
+      > A block quote.
+MIDDLE
+<ol>
+<li><p>A paragraph
+with two lines.</p>
+<pre><code>indented code
+</code></pre>
+<blockquote>
+<p>A block quote.</p>
+</blockquote></li>
+</ol>
+TESTEND
+
+TESTSTART
+  1.  A paragraph
+    with two lines.
+MIDDLE
+<ol>
+<li>A paragraph
+with two lines.</li>
+</ol>
+TESTEND
+
+TESTSTART
+> 1. > Blockquote
+continued here.
+MIDDLE
+<blockquote>
+<ol>
+<li><blockquote>
+<p>Blockquote
+continued here.</p>
+</blockquote></li>
+</ol>
+</blockquote>
+TESTEND
+
+TESTSTART
+> 1. > Blockquote
+> continued here.
+MIDDLE
+<blockquote>
+<ol>
+<li><blockquote>
+<p>Blockquote
+continued here.</p>
+</blockquote></li>
+</ol>
+</blockquote>
+TESTEND
+
+TESTSTART
+- foo
+  - bar
+    - baz
+MIDDLE
+<ul>
+<li>foo
+<ul>
+<li>bar
+<ul>
+<li>baz</li>
+</ul></li>
+</ul></li>
+</ul>
+TESTEND
+
+TESTSTART
+- foo
+ - bar
+  - baz
+MIDDLE
+<ul>
+<li>foo</li>
+<li>bar</li>
+<li>baz</li>
+</ul>
+TESTEND
+
+TESTSTART
+10) foo
+    - bar
+MIDDLE
+<ol start="10">
+<li>foo
+<ul>
+<li>bar</li>
+</ul></li>
+</ol>
+TESTEND
+
+TESTSTART
+10) foo
+   - bar
+MIDDLE
+<ol start="10">
+<li>foo</li>
+</ol>
+<ul>
+<li>bar</li>
+</ul>
+TESTEND
+
+TESTSTART
+- - foo
+MIDDLE
+<ul>
+<li><ul>
+<li>foo</li>
+</ul></li>
+</ul>
+TESTEND
+
+TESTSTART
+1. - 2. foo
+MIDDLE
+<ol>
+<li><ul>
+<li><ol start="2">
+<li>foo</li>
+</ol></li>
+</ul></li>
+</ol>
+TESTEND
+
+TESTSTART
+- foo
+-
+- bar
+MIDDLE
+<ul>
+<li>foo</li>
+<li></li>
+<li>bar</li>
+</ul>
+TESTEND
+
+TESTSTART
+-
+MIDDLE
+<ul>
+<li></li>
+</ul>
+TESTEND
+
+TESTSTART
+- foo
+- bar
++ baz
+MIDDLE
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+<ul>
+<li>baz</li>
+</ul>
+TESTEND
+
+TESTSTART
+1. foo
+2. bar
+3) baz
+MIDDLE
+<ol>
+<li>foo</li>
+<li>bar</li>
+</ol>
+<ol start="3">
+<li>baz</li>
+</ol>
+TESTEND
+
+TESTSTART
+- foo
+
+- bar
+
+
+- baz
+MIDDLE
+<ul>
+<li><p>foo</p></li>
+<li><p>bar</p></li>
+</ul>
+<ul>
+<li>baz</li>
+</ul>
+TESTEND
+
+TESTSTART
+- foo
+
+
+  bar
+- baz
+MIDDLE
+<ul>
+<li>foo</li>
+</ul>
+<p>bar</p>
+<ul>
+<li>baz</li>
+</ul>
+TESTEND
+
+TESTSTART
+- foo
+  - bar
+    - baz
+
+
+      bim
+MIDDLE
+<ul>
+<li>foo
+<ul>
+<li>bar
+<ul>
+<li>baz</li>
+</ul></li>
+</ul></li>
+</ul>
+<pre><code>  bim
+</code></pre>
+TESTEND
+
+TESTSTART
+- foo
+- bar
+
+
+- baz
+- bim
+MIDDLE
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+<ul>
+<li>baz</li>
+<li>bim</li>
+</ul>
+TESTEND
+
+TESTSTART
+-   foo
+
+    notcode
+
+-   foo
+
+
+    code
+MIDDLE
+<ul>
+<li><p>foo</p>
+<p>notcode</p></li>
+<li><p>foo</p></li>
+</ul>
+<pre><code>code
+</code></pre>
+TESTEND
+
+TESTSTART
+- a
+ - b
+  - c
+   - d
+  - e
+ - f
+- g
+MIDDLE
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+<li>d</li>
+<li>e</li>
+<li>f</li>
+<li>g</li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+- b
+
+- c
+MIDDLE
+<ul>
+<li><p>a</p></li>
+<li><p>b</p></li>
+<li><p>c</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+* a
+*
+
+* c
+MIDDLE
+<ul>
+<li><p>a</p></li>
+<li></li>
+<li><p>c</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+- b
+
+  c
+- d
+MIDDLE
+<ul>
+<li><p>a</p></li>
+<li><p>b</p>
+<p>c</p></li>
+<li><p>d</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+- b
+
+  [ref]: /url
+- d
+MIDDLE
+<ul>
+<li><p>a</p></li>
+<li><p>b</p></li>
+<li><p>d</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+- ```
+  b
+
+
+  ```
+- c
+MIDDLE
+<ul>
+<li>a</li>
+<li><pre><code>b
+
+
+</code></pre></li>
+<li>c</li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+  - b
+
+    c
+- d
+MIDDLE
+<ul>
+<li>a
+<ul>
+<li><p>b</p>
+<p>c</p></li>
+</ul></li>
+<li>d</li>
+</ul>
+TESTEND
+
+TESTSTART
+* a
+  > b
+  >
+* c
+MIDDLE
+<ul>
+<li>a
+<blockquote>
+<p>b</p>
+</blockquote></li>
+<li>c</li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+  > b
+  ```
+  c
+  ```
+- d
+MIDDLE
+<ul>
+<li>a
+<blockquote>
+<p>b</p>
+</blockquote>
+<pre><code>c
+</code></pre></li>
+<li>d</li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+MIDDLE
+<ul>
+<li>a</li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+  - b
+MIDDLE
+<ul>
+<li>a
+<ul>
+<li>b</li>
+</ul></li>
+</ul>
+TESTEND
+
+TESTSTART
+* foo
+  * bar
+
+  baz
+MIDDLE
+<ul>
+<li><p>foo</p>
+<ul>
+<li>bar</li>
+</ul>
+<p>baz</p></li>
+</ul>
+TESTEND
+
+TESTSTART
+- a
+  - b
+  - c
+
+- d
+  - e
+  - f
+MIDDLE
+<ul>
+<li><p>a</p>
+<ul>
+<li>b</li>
+<li>c</li>
+</ul></li>
+<li><p>d</p>
+<ul>
+<li>e</li>
+<li>f</li>
+</ul></li>
+</ul>
+TESTEND
+
+TESTSTART
+`hi`lo`
+MIDDLE
+<p><code>hi</code>lo`</p>
+TESTEND
+
+TESTSTART
+\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~
+MIDDLE
+<p>!&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</p>
+TESTEND
+
+TESTSTART
+\*not emphasized*
+\<br/> not a tag
+\[not a link](/foo)
+\`not code`
+1\. not a list
+\* not a list
+\# not a header
+\[foo]: /url "not a reference"
+MIDDLE
+<p>*not emphasized*
+&lt;br/&gt; not a tag
+[not a link](/foo)
+`not code`
+1. not a list
+* not a list
+# not a header
+[foo]: /url &quot;not a reference&quot;</p>
+TESTEND
+
+TESTSTART
+\\*emphasis*
+MIDDLE
+<p>\<em>emphasis</em></p>
+TESTEND
+
+TESTSTART
+foo\
+bar
+MIDDLE
+<p>foo<br />
+bar</p>
+TESTEND
+
+TESTSTART
+`` \[\` ``
+MIDDLE
+<p><code>\[\`</code></p>
+TESTEND
+
+TESTSTART
+    \[\]
+MIDDLE
+<pre><code>\[\]
+</code></pre>
+TESTEND
+
+TESTSTART
+~~~
+\[\]
+~~~
+MIDDLE
+<pre><code>\[\]
+</code></pre>
+TESTEND
+
+TESTSTART
+<http://example.com?find=\*>
+MIDDLE
+<p><a href="http://example.com?find=%5C*">http://example.com?find=\*</a></p>
+TESTEND
+
+TESTSTART
+<a href="/bar\/)">
+MIDDLE
+<p><a href="/bar\/)"></p>
+TESTEND
+
+TESTSTART
+[foo](/bar\* "ti\*tle")
+MIDDLE
+<p><a href="/bar*" title="ti*tle">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+
+[foo]: /bar\* "ti\*tle"
+MIDDLE
+<p><a href="/bar*" title="ti*tle">foo</a></p>
+TESTEND
+
+TESTSTART
+``` foo\+bar
+foo
+```
+MIDDLE
+<pre><code class="language-foo+bar">foo
+</code></pre>
+TESTEND
+
+TESTSTART
+&nbsp &x; &#; &#x; &ThisIsWayTooLongToBeAnEntityIsntIt; &hi?;
+MIDDLE
+<p>&amp;nbsp &amp;x; &amp;#; &amp;#x; &amp;ThisIsWayTooLongToBeAnEntityIsntIt; &amp;hi?;</p>
+TESTEND
+
+TESTSTART
+&copy
+MIDDLE
+<p>&amp;copy</p>
+TESTEND
+
+TESTSTART
+&MadeUpEntity;
+MIDDLE
+<p>&amp;MadeUpEntity;</p>
+TESTEND
+
+TESTSTART
+<a href="&ouml;&ouml;.html">
+MIDDLE
+<p><a href="&ouml;&ouml;.html"></p>
+TESTEND
+
+TESTSTART
+`f&ouml;&ouml;`
+MIDDLE
+<p><code>f&amp;ouml;&amp;ouml;</code></p>
+TESTEND
+
+TESTSTART
+    f&ouml;f&ouml;
+MIDDLE
+<pre><code>f&amp;ouml;f&amp;ouml;
+</code></pre>
+TESTEND
+
+TESTSTART
+`foo`
+MIDDLE
+<p><code>foo</code></p>
+TESTEND
+
+TESTSTART
+`` foo ` bar  ``
+MIDDLE
+<p><code>foo ` bar</code></p>
+TESTEND
+
+TESTSTART
+` `` `
+MIDDLE
+<p><code>``</code></p>
+TESTEND
+
+TESTSTART
+``
+foo
+``
+MIDDLE
+<p><code>foo</code></p>
+TESTEND
+
+TESTSTART
+`foo   bar
+  baz`
+MIDDLE
+<p><code>foo bar baz</code></p>
+TESTEND
+
+TESTSTART
+`foo `` bar`
+MIDDLE
+<p><code>foo `` bar</code></p>
+TESTEND
+
+TESTSTART
+`foo\`bar`
+MIDDLE
+<p><code>foo\</code>bar`</p>
+TESTEND
+
+TESTSTART
+*foo`*`
+MIDDLE
+<p>*foo<code>*</code></p>
+TESTEND
+
+TESTSTART
+[not a `link](/foo`)
+MIDDLE
+<p>[not a <code>link](/foo</code>)</p>
+TESTEND
+
+TESTSTART
+<http://foo.bar.`baz>`
+MIDDLE
+<p><a href="http://foo.bar.%60baz">http://foo.bar.`baz</a>`</p>
+TESTEND
+
+TESTSTART
+<a href="`">`
+MIDDLE
+<p><a href="`">`</p>
+TESTEND
+
+TESTSTART
+```foo``
+MIDDLE
+<p>```foo``</p>
+TESTEND
+
+TESTSTART
+`foo
+MIDDLE
+<p>`foo</p>
+TESTEND
+
+TESTSTART
+*foo bar*
+MIDDLE
+<p><em>foo bar</em></p>
+TESTEND
+
+TESTSTART
+_foo bar_
+MIDDLE
+<p><em>foo bar</em></p>
+TESTEND
+
+TESTSTART
+**foo bar**
+MIDDLE
+<p><strong>foo bar</strong></p>
+TESTEND
+
+TESTSTART
+__foo bar__
+MIDDLE
+<p><strong>foo bar</strong></p>
+TESTEND
+
+TESTSTART
+*foo
+bar*
+MIDDLE
+<p><em>foo
+bar</em></p>
+TESTEND
+
+TESTSTART
+_foo
+bar_
+MIDDLE
+<p><em>foo
+bar</em></p>
+TESTEND
+
+TESTSTART
+**foo
+bar**
+MIDDLE
+<p><strong>foo
+bar</strong></p>
+TESTEND
+
+TESTSTART
+__foo
+bar__
+MIDDLE
+<p><strong>foo
+bar</strong></p>
+TESTEND
+
+TESTSTART
+*foo [bar](/url)*
+MIDDLE
+<p><em>foo <a href="/url">bar</a></em></p>
+TESTEND
+
+TESTSTART
+_foo [bar](/url)_
+MIDDLE
+<p><em>foo <a href="/url">bar</a></em></p>
+TESTEND
+
+TESTSTART
+**foo [bar](/url)**
+MIDDLE
+<p><strong>foo <a href="/url">bar</a></strong></p>
+TESTEND
+
+TESTSTART
+__foo [bar](/url)__
+MIDDLE
+<p><strong>foo <a href="/url">bar</a></strong></p>
+TESTEND
+
+TESTSTART
+*foo [bar*](/url)
+MIDDLE
+<p>*foo <a href="/url">bar*</a></p>
+TESTEND
+
+TESTSTART
+_foo [bar_](/url)
+MIDDLE
+<p>_foo <a href="/url">bar_</a></p>
+TESTEND
+
+TESTSTART
+**<a href="**">
+MIDDLE
+<p>**<a href="**"></p>
+TESTEND
+
+TESTSTART
+__<a href="__">
+MIDDLE
+<p>__<a href="__"></p>
+TESTEND
+
+TESTSTART
+*a `*`*
+MIDDLE
+<p><em>a <code>*</code></em></p>
+TESTEND
+
+TESTSTART
+_a `_`_
+MIDDLE
+<p><em>a <code>_</code></em></p>
+TESTEND
+
+TESTSTART
+**a<http://foo.bar?q=**>
+MIDDLE
+<p>**a<a href="http://foo.bar?q=**">http://foo.bar?q=**</a></p>
+TESTEND
+
+TESTSTART
+__a<http://foo.bar?q=__>
+MIDDLE
+<p>__a<a href="http://foo.bar?q=__">http://foo.bar?q=__</a></p>
+TESTEND
+
+TESTSTART
+and * foo bar*
+MIDDLE
+<p>and * foo bar*</p>
+TESTEND
+
+TESTSTART
+_ foo bar_
+MIDDLE
+<p>_ foo bar_</p>
+TESTEND
+
+TESTSTART
+and ** foo bar**
+MIDDLE
+<p>and ** foo bar**</p>
+TESTEND
+
+TESTSTART
+__ foo bar__
+MIDDLE
+<p>__ foo bar__</p>
+TESTEND
+
+TESTSTART
+and *foo bar *
+MIDDLE
+<p>and *foo bar *</p>
+TESTEND
+
+TESTSTART
+and _foo bar _
+MIDDLE
+<p>and _foo bar _</p>
+TESTEND
+
+TESTSTART
+and **foo bar **
+MIDDLE
+<p>and **foo bar **</p>
+TESTEND
+
+TESTSTART
+and __foo bar __
+MIDDLE
+<p>and __foo bar __</p>
+TESTEND
+
+TESTSTART
+****hi****
+MIDDLE
+<p>****hi****</p>
+TESTEND
+
+TESTSTART
+_____hi_____
+MIDDLE
+<p>_____hi_____</p>
+TESTEND
+
+TESTSTART
+Sign here: _________
+MIDDLE
+<p>Sign here: _________</p>
+TESTEND
+
+TESTSTART
+** is not an empty emphasis
+MIDDLE
+<p>** is not an empty emphasis</p>
+TESTEND
+
+TESTSTART
+**** is not an empty strong emphasis
+MIDDLE
+<p>**** is not an empty strong emphasis</p>
+TESTEND
+
+TESTSTART
+*here is a \**
+MIDDLE
+<p><em>here is a *</em></p>
+TESTEND
+
+TESTSTART
+__this is a double underscore (`__`)__
+MIDDLE
+<p><strong>this is a double underscore (<code>__</code>)</strong></p>
+TESTEND
+
+TESTSTART
+foo*bar*baz
+MIDDLE
+<p>foo<em>bar</em>baz</p>
+TESTEND
+
+TESTSTART
+foo_bar_baz
+MIDDLE
+<p>foo_bar_baz</p>
+TESTEND
+
+TESTSTART
+foo__bar__baz
+MIDDLE
+<p>foo__bar__baz</p>
+TESTEND
+
+TESTSTART
+_foo_bar_baz_
+MIDDLE
+<p><em>foo_bar_baz</em></p>
+TESTEND
+
+TESTSTART
+11*15*32
+MIDDLE
+<p>11<em>15</em>32</p>
+TESTEND
+
+TESTSTART
+11_15_32
+MIDDLE
+<p>11_15_32</p>
+TESTEND
+
+TESTSTART
+_foo_bar_baz_
+MIDDLE
+<p><em>foo_bar_baz</em></p>
+TESTEND
+
+TESTSTART
+__foo__bar__baz__
+MIDDLE
+<p><strong>foo__bar__baz</strong></p>
+TESTEND
+
+TESTSTART
+***foo bar***
+MIDDLE
+<p><strong><em>foo bar</em></strong></p>
+TESTEND
+
+TESTSTART
+___foo bar___
+MIDDLE
+<p><strong><em>foo bar</em></strong></p>
+TESTEND
+
+TESTSTART
+***foo** bar*
+MIDDLE
+<p><em><strong>foo</strong> bar</em></p>
+TESTEND
+
+TESTSTART
+___foo__ bar_
+MIDDLE
+<p><em><strong>foo</strong> bar</em></p>
+TESTEND
+
+TESTSTART
+***foo* bar**
+MIDDLE
+<p><strong><em>foo</em> bar</strong></p>
+TESTEND
+
+TESTSTART
+___foo_ bar__
+MIDDLE
+<p><strong><em>foo</em> bar</strong></p>
+TESTEND
+
+TESTSTART
+*foo **bar***
+MIDDLE
+<p><em>foo <strong>bar</strong></em></p>
+TESTEND
+
+TESTSTART
+_foo __bar___
+MIDDLE
+<p><em>foo <strong>bar</strong></em></p>
+TESTEND
+
+TESTSTART
+**foo *bar***
+MIDDLE
+<p><strong>foo <em>bar</em></strong></p>
+TESTEND
+
+TESTSTART
+__foo _bar___
+MIDDLE
+<p><strong>foo <em>bar</em></strong></p>
+TESTEND
+
+TESTSTART
+*foo **bar***
+MIDDLE
+<p><em>foo <strong>bar</strong></em></p>
+TESTEND
+
+TESTSTART
+_foo __bar___
+MIDDLE
+<p><em>foo <strong>bar</strong></em></p>
+TESTEND
+
+TESTSTART
+*foo *bar* baz*
+MIDDLE
+<p><em>foo <em>bar</em> baz</em></p>
+TESTEND
+
+TESTSTART
+_foo _bar_ baz_
+MIDDLE
+<p><em>foo <em>bar</em> baz</em></p>
+TESTEND
+
+TESTSTART
+**foo **bar** baz**
+MIDDLE
+<p><strong>foo <strong>bar</strong> baz</strong></p>
+TESTEND
+
+TESTSTART
+__foo __bar__ baz__
+MIDDLE
+<p><strong>foo <strong>bar</strong> baz</strong></p>
+TESTEND
+
+TESTSTART
+*foo **bar** baz*
+MIDDLE
+<p><em>foo <strong>bar</strong> baz</em></p>
+TESTEND
+
+TESTSTART
+_foo __bar__ baz_
+MIDDLE
+<p><em>foo <strong>bar</strong> baz</em></p>
+TESTEND
+
+TESTSTART
+**foo *bar* baz**
+MIDDLE
+<p><strong>foo <em>bar</em> baz</strong></p>
+TESTEND
+
+TESTSTART
+__foo _bar_ baz__
+MIDDLE
+<p><strong>foo <em>bar</em> baz</strong></p>
+TESTEND
+
+TESTSTART
+**foo, *bar*, baz**
+MIDDLE
+<p><strong>foo, <em>bar</em>, baz</strong></p>
+TESTEND
+
+TESTSTART
+__foo, _bar_, baz__
+MIDDLE
+<p><strong>foo, <em>bar</em>, baz</strong></p>
+TESTEND
+
+TESTSTART
+*foo**bar**baz*
+MIDDLE
+<p><em>foo</em><em>bar</em><em>baz</em></p>
+TESTEND
+
+TESTSTART
+**foo**
+MIDDLE
+<p><strong>foo</strong></p>
+TESTEND
+
+TESTSTART
+****foo****
+MIDDLE
+<p>****foo****</p>
+TESTEND
+
+TESTSTART
+*_foo_*
+MIDDLE
+<p><em><em>foo</em></em></p>
+TESTEND
+
+TESTSTART
+**__foo__**
+MIDDLE
+<p><strong><strong>foo</strong></strong></p>
+TESTEND
+
+TESTSTART
+*foo**
+MIDDLE
+<p><em>foo</em>*</p>
+TESTEND
+
+TESTSTART
+*foo *bar**
+MIDDLE
+<p><em>foo <em>bar</em></em></p>
+TESTEND
+
+TESTSTART
+**foo***
+MIDDLE
+<p><strong>foo</strong>*</p>
+TESTEND
+
+TESTSTART
+***foo* bar***
+MIDDLE
+<p><strong><em>foo</em> bar</strong>*</p>
+TESTEND
+
+TESTSTART
+***foo** bar***
+MIDDLE
+<p><em><strong>foo</strong> bar</em>**</p>
+TESTEND
+
+TESTSTART
+*foo**bar***
+MIDDLE
+<p><em>foo</em><em>bar</em>**</p>
+TESTEND
+
+TESTSTART
+*foo****
+MIDDLE
+<p>*foo****</p>
+TESTEND
+
+TESTSTART
+*bar***
+MIDDLE
+<p><em>bar</em>**</p>
+TESTEND
+
+TESTSTART
+**bar***
+MIDDLE
+<p><strong>bar</strong>*</p>
+TESTEND
+
+TESTSTART
+***foo *bar*
+MIDDLE
+<p>***foo <em>bar</em></p>
+TESTEND
+
+TESTSTART
+[link](/uri "title")
+MIDDLE
+<p><a href="/uri" title="title">link</a></p>
+TESTEND
+
+TESTSTART
+[link](/uri)
+MIDDLE
+<p><a href="/uri">link</a></p>
+TESTEND
+
+TESTSTART
+[link]()
+MIDDLE
+<p><a href="">link</a></p>
+TESTEND
+
+TESTSTART
+[link](<>)
+MIDDLE
+<p><a href="">link</a></p>
+TESTEND
+
+TESTSTART
+[link](/my uri)
+MIDDLE
+<p>[link](/my uri)</p>
+TESTEND
+
+TESTSTART
+[link](</my uri>)
+MIDDLE
+<p><a href="/my%20uri">link</a></p>
+TESTEND
+
+TESTSTART
+[link](foo
+bar)
+MIDDLE
+<p>[link](foo
+bar)</p>
+TESTEND
+
+TESTSTART
+[link]((foo)and(bar))
+MIDDLE
+<p><a href="(foo)and(bar)">link</a></p>
+TESTEND
+
+TESTSTART
+[link](foo(and(bar)))
+MIDDLE
+<p>[link](foo(and(bar)))</p>
+TESTEND
+
+TESTSTART
+[link](foo(and\(bar\)))
+MIDDLE
+<p><a href="foo(and(bar))">link</a></p>
+TESTEND
+
+TESTSTART
+[link](<foo(and(bar))>)
+MIDDLE
+<p><a href="foo(and(bar))">link</a></p>
+TESTEND
+
+TESTSTART
+[link](foo\)\:)
+MIDDLE
+<p><a href="foo):">link</a></p>
+TESTEND
+
+TESTSTART
+[link](foo%20b&auml;)
+MIDDLE
+<p><a href="foo%20b%C3%A4">link</a></p>
+TESTEND
+
+TESTSTART
+[link]("title")
+MIDDLE
+<p><a href="%22title%22">link</a></p>
+TESTEND
+
+TESTSTART
+[link](/url "title")
+[link](/url 'title')
+[link](/url (title))
+MIDDLE
+<p><a href="/url" title="title">link</a>
+<a href="/url" title="title">link</a>
+<a href="/url" title="title">link</a></p>
+TESTEND
+
+TESTSTART
+[link](/url "title \"&quot;")
+MIDDLE
+<p><a href="/url" title="title &quot;&quot;">link</a></p>
+TESTEND
+
+TESTSTART
+[link](/url "title "and" title")
+MIDDLE
+<p>[link](/url &quot;title &quot;and&quot; title&quot;)</p>
+TESTEND
+
+TESTSTART
+[link](/url 'title "and" title')
+MIDDLE
+<p><a href="/url" title="title &quot;and&quot; title">link</a></p>
+TESTEND
+
+TESTSTART
+[link](   /uri
+  "title"  )
+MIDDLE
+<p><a href="/uri" title="title">link</a></p>
+TESTEND
+
+TESTSTART
+[link] (/uri)
+MIDDLE
+<p>[link] (/uri)</p>
+TESTEND
+
+TESTSTART
+[foo <bar attr="](baz)">
+MIDDLE
+<p>[foo <bar attr="](baz)"></p>
+TESTEND
+
+TESTSTART
+[foo][bar]
+
+[bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[*foo\!*][bar]
+
+[bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title"><em>foo!</em></a></p>
+TESTEND
+
+TESTSTART
+[foo][BaR]
+
+[bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[Foo
+  bar]: /url
+
+[Baz][Foo bar]
+MIDDLE
+<p><a href="/url">Baz</a></p>
+TESTEND
+
+TESTSTART
+[foo] [bar]
+
+[bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+[bar]
+
+[bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]: /url1
+
+[foo]: /url2
+
+[bar][foo]
+MIDDLE
+<p><a href="/url1">bar</a></p>
+TESTEND
+
+TESTSTART
+[bar][foo\!]
+
+[foo!]: /url
+MIDDLE
+<p>[bar][foo!]</p>
+TESTEND
+
+TESTSTART
+[foo][]
+
+[foo]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[*foo* bar][]
+
+[*foo* bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title"><em>foo</em> bar</a></p>
+TESTEND
+
+TESTSTART
+[Foo][]
+
+[foo]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">Foo</a></p>
+TESTEND
+
+TESTSTART
+[foo] 
+[]
+
+[foo]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo]
+
+[foo]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+[*foo* bar]
+
+[*foo* bar]: /url "title"
+MIDDLE
+<p><a href="/url" title="title"><em>foo</em> bar</a></p>
+TESTEND
+
+TESTSTART
+[[*foo* bar]]
+
+[*foo* bar]: /url "title"
+MIDDLE
+<p>[<a href="/url" title="title"><em>foo</em> bar</a>]</p>
+TESTEND
+
+TESTSTART
+[Foo]
+
+[foo]: /url "title"
+MIDDLE
+<p><a href="/url" title="title">Foo</a></p>
+TESTEND
+
+TESTSTART
+\[foo]
+
+[foo]: /url "title"
+MIDDLE
+<p>[foo]</p>
+TESTEND
+
+TESTSTART
+[foo*]: /url
+
+*[foo*]
+MIDDLE
+<p>*<a href="/url">foo*</a></p>
+TESTEND
+
+TESTSTART
+[foo`]: /url
+
+[foo`]`
+MIDDLE
+<p>[foo<code>]</code></p>
+TESTEND
+
+TESTSTART
+[[[foo]]]
+
+[[[foo]]]: /url
+MIDDLE
+<p><a href="/url">[[foo]]</a></p>
+TESTEND
+
+TESTSTART
+[[[foo]]]
+
+[[[foo]]]: /url1
+[foo]: /url2
+MIDDLE
+<p><a href="/url1">[[foo]]</a></p>
+TESTEND
+
+TESTSTART
+[\[foo]
+
+[\[foo]: /url
+MIDDLE
+<p><a href="/url">[foo</a></p>
+TESTEND
+
+TESTSTART
+[foo][bar]
+
+[foo]: /url1
+[bar]: /url2
+MIDDLE
+<p><a href="/url2">foo</a></p>
+TESTEND
+
+TESTSTART
+[foo][bar][baz]
+
+[baz]: /url
+MIDDLE
+<p>[foo]<a href="/url">bar</a></p>
+TESTEND
+
+TESTSTART
+[foo][bar][baz]
+
+[baz]: /url1
+[bar]: /url2
+MIDDLE
+<p><a href="/url2">foo</a><a href="/url1">baz</a></p>
+TESTEND
+
+TESTSTART
+[foo][bar][baz]
+
+[baz]: /url1
+[foo]: /url2
+MIDDLE
+<p>[foo]<a href="/url1">bar</a></p>
+TESTEND
+
+TESTSTART
+![foo](/url "title")
+MIDDLE
+<p><img src="/url" alt="foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+![foo *bar*]
+
+[foo *bar*]: train.jpg "train & tracks"
+MIDDLE
+<p><img src="train.jpg" alt="foo &lt;em&gt;bar&lt;/em&gt;" title="train &amp; tracks" /></p>
+TESTEND
+
+TESTSTART
+![foo *bar*][]
+
+[foo *bar*]: train.jpg "train & tracks"
+MIDDLE
+<p><img src="train.jpg" alt="foo &lt;em&gt;bar&lt;/em&gt;" title="train &amp; tracks" /></p>
+TESTEND
+
+TESTSTART
+![foo *bar*][foobar]
+
+[FOOBAR]: train.jpg "train & tracks"
+MIDDLE
+<p><img src="train.jpg" alt="foo &lt;em&gt;bar&lt;/em&gt;" title="train &amp; tracks" /></p>
+TESTEND
+
+TESTSTART
+![foo](train.jpg)
+MIDDLE
+<p><img src="train.jpg" alt="foo" /></p>
+TESTEND
+
+TESTSTART
+My ![foo bar](/path/to/train.jpg  "title"   )
+MIDDLE
+<p>My <img src="/path/to/train.jpg" alt="foo bar" title="title" /></p>
+TESTEND
+
+TESTSTART
+![foo](<url>)
+MIDDLE
+<p><img src="url" alt="foo" /></p>
+TESTEND
+
+TESTSTART
+![](/url)
+MIDDLE
+<p><img src="/url" alt="" /></p>
+TESTEND
+
+TESTSTART
+![foo] [bar]
+
+[bar]: /url
+MIDDLE
+<p><img src="/url" alt="foo" /></p>
+TESTEND
+
+TESTSTART
+![foo] [bar]
+
+[BAR]: /url
+MIDDLE
+<p><img src="/url" alt="foo" /></p>
+TESTEND
+
+TESTSTART
+![foo][]
+
+[foo]: /url "title"
+MIDDLE
+<p><img src="/url" alt="foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+![*foo* bar][]
+
+[*foo* bar]: /url "title"
+MIDDLE
+<p><img src="/url" alt="&lt;em&gt;foo&lt;/em&gt; bar" title="title" /></p>
+TESTEND
+
+TESTSTART
+![Foo][]
+
+[foo]: /url "title"
+MIDDLE
+<p><img src="/url" alt="Foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+![foo] 
+[]
+
+[foo]: /url "title"
+MIDDLE
+<p><img src="/url" alt="foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+![foo]
+
+[foo]: /url "title"
+MIDDLE
+<p><img src="/url" alt="foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+![*foo* bar]
+
+[*foo* bar]: /url "title"
+MIDDLE
+<p><img src="/url" alt="&lt;em&gt;foo&lt;/em&gt; bar" title="title" /></p>
+TESTEND
+
+TESTSTART
+![[foo]]
+
+[[foo]]: /url "title"
+MIDDLE
+<p><img src="/url" alt="[foo]" title="title" /></p>
+TESTEND
+
+TESTSTART
+![Foo]
+
+[foo]: /url "title"
+MIDDLE
+<p><img src="/url" alt="Foo" title="title" /></p>
+TESTEND
+
+TESTSTART
+\!\[foo]
+
+[foo]: /url "title"
+MIDDLE
+<p>![foo]</p>
+TESTEND
+
+TESTSTART
+\![foo]
+
+[foo]: /url "title"
+MIDDLE
+<p>!<a href="/url" title="title">foo</a></p>
+TESTEND
+
+TESTSTART
+<http://foo.bar.baz>
+MIDDLE
+<p><a href="http://foo.bar.baz">http://foo.bar.baz</a></p>
+TESTEND
+
+TESTSTART
+<http://foo.bar.baz?q=hello&id=22&boolean>
+MIDDLE
+<p><a href="http://foo.bar.baz?q=hello&amp;id=22&amp;boolean">http://foo.bar.baz?q=hello&amp;id=22&amp;boolean</a></p>
+TESTEND
+
+TESTSTART
+<irc://foo.bar:2233/baz>
+MIDDLE
+<p><a href="irc://foo.bar:2233/baz">irc://foo.bar:2233/baz</a></p>
+TESTEND
+
+TESTSTART
+<MAILTO:FOO@BAR.BAZ>
+MIDDLE
+<p><a href="MAILTO:FOO@BAR.BAZ">MAILTO:FOO@BAR.BAZ</a></p>
+TESTEND
+
+TESTSTART
+<http://foo.bar/baz bim>
+MIDDLE
+<p>&lt;http://foo.bar/baz bim&gt;</p>
+TESTEND
+
+TESTSTART
+<foo@bar.example.com>
+MIDDLE
+<p><a href="mailto:foo@bar.example.com">foo@bar.example.com</a></p>
+TESTEND
+
+TESTSTART
+<foo+special@Bar.baz-bar0.com>
+MIDDLE
+<p><a href="mailto:foo+special@Bar.baz-bar0.com">foo+special@Bar.baz-bar0.com</a></p>
+TESTEND
+
+TESTSTART
+<>
+MIDDLE
+<p>&lt;&gt;</p>
+TESTEND
+
+TESTSTART
+<heck://bing.bong>
+MIDDLE
+<p>&lt;heck://bing.bong&gt;</p>
+TESTEND
+
+TESTSTART
+< http://foo.bar >
+MIDDLE
+<p>&lt; http://foo.bar &gt;</p>
+TESTEND
+
+TESTSTART
+<foo.bar.baz>
+MIDDLE
+<p>&lt;foo.bar.baz&gt;</p>
+TESTEND
+
+TESTSTART
+<localhost:5001/foo>
+MIDDLE
+<p>&lt;localhost:5001/foo&gt;</p>
+TESTEND
+
+TESTSTART
+http://example.com
+MIDDLE
+<p>http://example.com</p>
+TESTEND
+
+TESTSTART
+foo@bar.example.com
+MIDDLE
+<p>foo@bar.example.com</p>
+TESTEND
+
+TESTSTART
+<a><bab><c2c>
+MIDDLE
+<p><a><bab><c2c></p>
+TESTEND
+
+TESTSTART
+<a/><b2/>
+MIDDLE
+<p><a/><b2/></p>
+TESTEND
+
+TESTSTART
+<a  /><b2
+data="foo" >
+MIDDLE
+<p><a  /><b2
+data="foo" ></p>
+TESTEND
+
+TESTSTART
+<a foo="bar" bam = 'baz <em>"</em>'
+_boolean zoop:33=zoop:33 />
+MIDDLE
+<p><a foo="bar" bam = 'baz <em>"</em>'
+_boolean zoop:33=zoop:33 /></p>
+TESTEND
+
+TESTSTART
+<33> <__>
+MIDDLE
+<p>&lt;33&gt; &lt;__&gt;</p>
+TESTEND
+
+TESTSTART
+<a h*#ref="hi">
+MIDDLE
+<p>&lt;a h*#ref=&quot;hi&quot;&gt;</p>
+TESTEND
+
+TESTSTART
+<a href="hi'> <a href=hi'>
+MIDDLE
+<p>&lt;a href=&quot;hi'&gt; &lt;a href=hi'&gt;</p>
+TESTEND
+
+TESTSTART
+< a><
+foo><bar/ >
+MIDDLE
+<p>&lt; a&gt;&lt;
+foo&gt;&lt;bar/ &gt;</p>
+TESTEND
+
+TESTSTART
+<a href='bar'title=title>
+MIDDLE
+<p>&lt;a href='bar'title=title&gt;</p>
+TESTEND
+
+TESTSTART
+</a>
+</foo >
+MIDDLE
+<p></a>
+</foo ></p>
+TESTEND
+
+TESTSTART
+</a href="foo">
+MIDDLE
+<p>&lt;/a href=&quot;foo&quot;&gt;</p>
+TESTEND
+
+TESTSTART
+foo <!-- this is a
+comment - with hyphen -->
+MIDDLE
+<p>foo <!-- this is a
+comment - with hyphen --></p>
+TESTEND
+
+TESTSTART
+foo <!-- not a comment -- two hyphens -->
+MIDDLE
+<p>foo &lt;!-- not a comment -- two hyphens --&gt;</p>
+TESTEND
+
+TESTSTART
+foo <?php echo $a; ?>
+MIDDLE
+<p>foo <?php echo $a; ?></p>
+TESTEND
+
+TESTSTART
+foo <!ELEMENT br EMPTY>
+MIDDLE
+<p>foo <!ELEMENT br EMPTY></p>
+TESTEND
+
+TESTSTART
+foo <![CDATA[>&<]]>
+MIDDLE
+<p>foo <![CDATA[>&<]]></p>
+TESTEND
+
+TESTSTART
+<a href="&ouml;">
+MIDDLE
+<p><a href="&ouml;"></p>
+TESTEND
+
+TESTSTART
+<a href="\*">
+MIDDLE
+<p><a href="\*"></p>
+TESTEND
+
+TESTSTART
+<a href="\"">
+MIDDLE
+<p>&lt;a href=&quot;&quot;&quot;&gt;</p>
+TESTEND
+
+TESTSTART
+foo  
+baz
+MIDDLE
+<p>foo<br />
+baz</p>
+TESTEND
+
+TESTSTART
+foo\
+baz
+MIDDLE
+<p>foo<br />
+baz</p>
+TESTEND
+
+TESTSTART
+foo       
+baz
+MIDDLE
+<p>foo<br />
+baz</p>
+TESTEND
+
+TESTSTART
+foo  
+     bar
+MIDDLE
+<p>foo<br />
+bar</p>
+TESTEND
+
+TESTSTART
+foo\
+     bar
+MIDDLE
+<p>foo<br />
+bar</p>
+TESTEND
+
+TESTSTART
+*foo  
+bar*
+MIDDLE
+<p><em>foo<br />
+bar</em></p>
+TESTEND
+
+TESTSTART
+*foo\
+bar*
+MIDDLE
+<p><em>foo<br />
+bar</em></p>
+TESTEND
+
+TESTSTART
+`code  
+span`
+MIDDLE
+<p><code>code span</code></p>
+TESTEND
+
+TESTSTART
+`code\
+span`
+MIDDLE
+<p><code>code\ span</code></p>
+TESTEND
+
+TESTSTART
+<a href="foo  
+bar">
+MIDDLE
+<p><a href="foo  
+bar"></p>
+TESTEND
+
+TESTSTART
+<a href="foo\
+bar">
+MIDDLE
+<p><a href="foo\
+bar"></p>
+TESTEND
+
+TESTSTART
+foo
+baz
+MIDDLE
+<p>foo
+baz</p>
+TESTEND
+
+TESTSTART
+foo 
+ baz
+MIDDLE
+<p>foo
+baz</p>
+TESTEND
+
+TESTSTART
+hello $.;'there
+MIDDLE
+<p>hello $.;'there</p>
+TESTEND
+
+TESTSTART
+Multiple     spaces
+MIDDLE
+<p>Multiple     spaces</p>
+TESTEND
