@@ -31,5 +31,20 @@ MARKDOWN
         expect(result_stripped).to eq expected_stripped
       end
     end
+
+    describe "::md_to_ast" do
+      it "returns an ast" do
+        ast = StmdRuby::md_to_ast <<MARKDOWN
+# Header 1
+## Header 2
+### Header 3
+
+* foo
+* bar
+* baz `foo` _monkey_
+MARKDOWN
+        expect(ast).to be_kind_of(StmdRuby::Node)
+      end
+    end
   end
 end
